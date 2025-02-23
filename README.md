@@ -22,7 +22,7 @@ a i3wm-dotfiles repository. It has my i3wm config files
  - Firefox 
  - Discover or Gnome apps
  - neofetch ( optional )
-
+ - screenfetch ( Fedora Only ! ]
 # installation 
 
 run the install.sh script using ./install.sh
@@ -30,8 +30,13 @@ run the install.sh script using ./install.sh
 you can run this script in user u dont need to being root
   
 I do not prefer the installition script because i dont tried the script it can be break ur i3 
-  
+
 Just copy the config files in ur ~/.config for healthy installition 😃
+ 
+## ATTENTION : !   FEDORA ONLY  : 
+
+If you are using Fedora, Screenfetch will be installed instead of Neofetch! 
+  
     
 
  
