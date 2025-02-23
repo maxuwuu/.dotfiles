@@ -31,6 +31,4 @@ ln -sf ~/dotfiles/.bashrc ~/.bashrc
 
 echo "New i3 configuration and .bashrc applied. You can restart i3 now."
 
-Bu script, i3 ve gerekli paketleri yükleyecek, dotfiles'ı klonlayacak ve i3 yapılandırmasını ve .bashrc dosyasını ilgili dizinlere kopyalayacaktır.
-
 
