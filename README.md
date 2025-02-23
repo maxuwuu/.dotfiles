@@ -3,10 +3,14 @@
 
 ![i3 config results ](https://github.com/maxuwuu/.dotfiles/blob/main/i3_config_pp%5B1%5D.png)
 
+![i3 config results ](https://github.com/maxuwuu/.dotfiles/blob/main/i3%20config%20pp2.png)
+
+
+ 
 THIS IS MY İ3 CONFIG FILE 
  
  MENU : dmenu 
-WALLPEPER : Feh 
+WALLPEPER : apply wallpeper for Feh 
 SCREEN RESULOTION : 1920X1080 
 
 I USE Mod4 ( ALT )
@@ -48,8 +52,8 @@ Arch Linux :
   # Fedora :    
 git clone <https://github.com/maxuwuu/.dotfiles/tree/main>  
 
-# Copy the configuration file to the ~/.config/i3/config directory:
-
+# Copy the configuration file to the :   ~/.config/i3/config directory             : 
+ 
 # ENTER THE DOTFILES FILE FROM THE TERMINAL : 
  
 
@@ -85,7 +89,7 @@ GNOME FILES (NAUTILUS)
 NAVIGATE TO THE CLONED REPOSITORY DIRECTORY AND COPY THE CONFIG FILE
  PASTE THE CONFIG FILE IN ~/.CONFIG/I3/
 
-AND USE THE MY CONFIG FILE :) enjoy :)
+ # AND USE THE MY CONFIG FILE :) enjoy :)
  
 
 
