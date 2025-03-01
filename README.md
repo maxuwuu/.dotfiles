@@ -14,7 +14,7 @@ a i3wm-dotfiles repository. It has my i3wm config files
 #  dependencies 
  
  - i3 
- - dmenu 
+ - rofi
  - polybar 
  - feh 
  - dolphin 
