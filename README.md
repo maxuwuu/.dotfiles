@@ -20,7 +20,6 @@ a i3wm-dotfiles repository. It has my i3wm config files
  - dolphin 
  - Konsole 
  - Firefox 
- - Discover or Gnome apps
  - neofetch ( optional )
  - screenfetch ( Fedora Only ! ]
 # installation 
