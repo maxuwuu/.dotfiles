@@ -191,3 +191,4 @@ bar {
 exec --no-startup-id picom 
 exec --no-startup-id mybar polybar 
 exec --no-startup-id feh --bg-scale  
+exec --no-startup-id polybar example
