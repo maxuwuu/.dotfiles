@@ -19,7 +19,7 @@ primary =  #456771
 secondary = #09404d
 alert = #bd2c40
 
-[bar/example]
+[bar/polybar]
 ;monitor = ${env:MONITOR:}
 width = 100%
 height = 30
