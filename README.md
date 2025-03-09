@@ -32,19 +32,10 @@ I do not prefer the installition script because i dont tried the script it can b
 
 Just copy the config files in ur ~/.config for healthy installition 😃
  
-## ATTENTION : !   FEDORA ONLY  : 
+## ATTENTION : ! 
 
 If you are using Fedora, Screenfetch will be installed instead of Neofetch! 
   
-
-
-
-
-
-
-
-
-## ATTENTION : !   UPDATED :   
 - neofetch :  config.conf 
 - rofi : config.rasi 
 - rofi theme : Arc-Dark.rasi 
