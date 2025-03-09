@@ -16,12 +16,11 @@ a i3wm-dotfiles repository. It has my i3wm config files
  - i3 
  - rofi
  - polybar 
- - feh and nitrogen 
+ - feh / nitrogen 
  - dolphin 
  - Konsole 
  - Firefox 
- - neofetch ( optional )
- - screenfetch ( Fedora Only ! ]
+ - neofetch / screenfetch
 # installation 
 
 run the install.sh script using ./install.sh
@@ -41,3 +40,4 @@ If you are using Fedora, Screenfetch will be installed instead of Neofetch!
 - rofi theme : Arc-Dark.rasi 
 - Bash config : .bashrc
  
+
