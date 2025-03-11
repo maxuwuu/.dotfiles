@@ -7,9 +7,9 @@ a i3wm-dotfiles repository. It has my i3wm config files
 # screenshots 
 
 
-![i3 config results ](https://github.com/maxuwuu/.dotfiles/blob/main/i3%20config%20z.png)
-(![i3 config results ](https://github.com/maxuwuu/.dotfiles/blob/main/i3%20config%20b.png)
-(![i3 config results ](https://github.com/maxuwuu/.dotfiles/blob/main/i3%20config%20a.png)
+![i3 config results ](https://github.com/maxuwuu/.dotfiles/blob/main/i3%20confg%20a.png)
+(![i3 config results ]()
+(![i3 config results ]()
 
 #  dependencies 
  
