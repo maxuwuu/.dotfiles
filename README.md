@@ -7,9 +7,9 @@ a i3wm-dotfiles repository. It has my i3wm config files
 # screenshots 
 
 
-![i3 config results ](https://github.com/maxuwuu/.dotfiles/blob/main/i3%20confg%20a.png)
-(![i3 config results ]()
-(![i3 config results ]()
+![i3 config results ](https://github.com/maxuwuu/.dotfiles/blob/main/x.png)
+(![i3 config results ](https://github.com/maxuwuu/.dotfiles/blob/main/p.png)
+
 
 #  dependencies 
  
@@ -31,13 +31,6 @@ I do not prefer the installition script because i dont tried the script it can b
 
 Just copy the config files in ur ~/.config for healthy installition 😃
  
-## ATTENTION : ! 
-
-If you are using Fedora, Screenfetch will be installed instead of Neofetch! 
   
-- neofetch :  config.conf 
-- rofi : config.rasi 
-- rofi theme : Arc-Dark.rasi 
-- Bash config : .bashrc
- 
+
 
