@@ -1,4 +1,4 @@
 
-//@theme "/usr/share/rofi/themes/onedark.rasi"
+//@theme "/home/max/.config/rofi/theme/onedark.rasi"
 
-@theme "/usr/share/rofi/themes/omedark.rasi"
+@theme "/home/max/.config/rofi/theme/onedark.rasi"
