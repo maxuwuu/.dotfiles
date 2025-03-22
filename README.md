@@ -16,9 +16,9 @@ i3wm-dotfiles repository. It has my i3wm config files
  - i3 
  - rofi
  - polybar 
- - feh / nitrogen 
- - dolphin 
- - Konsole 
+ - nitrogen / feh 
+ - Nautilus ( Gnome Files )
+ - Konsole
  - Firefox 
  - neofetch 
 
