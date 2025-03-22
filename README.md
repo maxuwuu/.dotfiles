@@ -20,11 +20,8 @@ i3wm-dotfiles repository. It has my i3wm config files
  - dolphin 
  - Konsole 
  - Firefox 
- - neofetch / screenfetch
+ - neofetch 
 
-  # ATTENTION ( FEDORA USER ONLY ) 
-  If you are using Fedora Linux, do not use neofetch (because it is not in the Fedora 41 repository)
-use screenfetch instead .
-
+  
 
 
