@@ -22,9 +22,9 @@ i3wm-dotfiles repository. It has my i3wm config files
  - Firefox 
  - neofetch / screenfetch
 
-  
+  # ATTENTION ( FEDORA USER ONLY ) 
+  If you are using Fedora Linux, do not use neofetch (because it is not in the Fedora 41 repository)
+use screenfetch instead .
 
-# ATTETTION ! 
-If you are using Fedora do not use this : neofetch ( because neofetch is not in fedora 41 repository )  you use : screenfetch 
 
 
