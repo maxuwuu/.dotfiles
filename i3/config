@@ -18,6 +18,10 @@ tiling_drag modifier titlebar
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show drun -theme /home/max/.config/rofi/theme/onedark.rasi
+bindsym $mod+a exec rofi -show drun -modi window -show window
+bindsym $mod+x exec rofi -show drun -modi file-browser -show fire-browser 
+
+
 
 bindsym $mod+j focus left
 bindsym $mod+k focus down
