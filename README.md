@@ -1,7 +1,7 @@
 
 # .dotfiles
 
-a i3wm-dotfiles repository. It has my i3wm config files 
+i3wm-dotfiles repository. It has my i3wm config files 
 
 
 # screenshots 
@@ -23,5 +23,8 @@ a i3wm-dotfiles repository. It has my i3wm config files
  - neofetch / screenfetch
 
   
+
+# ATTETTION ! 
+If you are using Fedora do not use this : neofetch ( because neofetch is not in fedora 41 repository )  you use : screenfetch 
 
 
