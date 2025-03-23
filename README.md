@@ -24,6 +24,8 @@ i3wm-dotfiles repository. It has my i3wm config files
  - Brave 
  - neofetch 
 
-  
-
+ # installition  
+ run the install.sh script using ./install.sh
+ you can run this script in user u dont need to being root
+Just copy the config files in ur ~/.config for healthy installition :)
 
