@@ -25,14 +25,7 @@ i3wm-dotfiles repository. It has my i3wm config files
  - neofetch 
 
  # installition  
-```shell
-# ubuntu 
-sudo apt install i3 rofi polybar nitrogen feh flatpak neofetch 
-
-# Arch 
-sudo pacman -S i3 rofi polybar nitrogen feh flatpak neofetch
-
-### Just copy the config files in ur ~/.config for healthy installition :) ### 
+you use install.sh :) 
 
 
 
