@@ -1,0 +1,68 @@
+[colors] background = #808080 background-alt = #A0A0A0 foreground = #333333 foreground-alt = #555555 primary = #606060 secondary = #707070 alert = #909090
+
+[bar/example] monitor = ${env:MONITOR:} width = 30 height = 100% position = left fixed-center = false
+
+background = ${colors.background} foreground = ${colors.foreground}
+
+line-size = 3 line-color = #505050
+
+border-size = 4 border-color = ${colors.primary} padding-left = 0 padding-right = 2
+
+module-margin-left = 1 module-margin-right = 2
+
+font-0 = mono:pixelsize=11;1 font-1 = FontAwesome:pixelsize=11;1 font-2 = siji:pixelsize=10;1
+
+modules-top = i3 modules-center = xwindow modules-bottom = volume memory cpu temperature time kernel-version
+
+tray-position = none scroll-up = i3wm-wsnext scroll-down = i3wm-wsprev
+
+[module/xwindow] type = internal/xwindow label = %title:0:30:...%
+
+[module/xkeyboard] type = internal/xkeyboard blacklist-0 = num lock
+
+format-prefix = " " format-prefix-foreground = ${colors.foreground-alt} format-prefix-underline = ${colors.secondary}
+
+label-layout = %layout% label-layout-underline = ${colors.secondary}
+
+label-indicator-padding = 2 label-indicator-margin = 1 label-indicator-background = ${colors.secondary} label-indicator-underline = ${colors.secondary}
+
+[module/filesystem] type = internal/fs interval = 25
+
+mount-0 = /
+
+label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%% label-unmounted = %mountpoint% not mounted label-unmounted-foreground = ${colors.foreground-alt}
+
+[module/i3] type = internal/i3 format = <label-state> <label-mode> index-sort = true wrapping-scroll = false
+
+label-mode-padding = 2 label-mode-foreground = #000 label-mode-background = ${colors.primary}
+
+label-focused = %index% label-focused-background = ${colors.background-alt} label-focused-underline = ${colors.primary} label-focused-padding = 2
+
+label-unfocused = %index% label-unfocused-padding = 2
+
+label-visible = %index% label-visible-background = ${colors.background-alt} label-visible-underline = ${colors.primary} label-visible-padding = 2
+
+label-urgent = %index%! label-urgent-background = ${colors.alert} label-urgent-padding = 2
+
+[module/cpu] type = internal/cpu interval = 2 format-prefix = " " format-prefix-foreground = ${colors.foreground-alt} format-underline = ${colors.primary} label = %percentage%%
+
+[module/memory] type = internal/memory interval = 2 format-prefix = " " format-prefix-foreground = ${colors.foreground-alt} format-underline = ${colors.primary} label = %percentage_used%%
+
+[module/temperature] type = internal/temperature thermal-zone = 0 warn-temperature = 60
+
+format = <ramp> <label> format-underline = ${colors.primary} format-warn = <ramp> <label-warn> format-warn-underline = ${colors.alert}
+
+label = %temperature% label-warn = %temperature% label-warn-foreground = ${colors.secondary}
+
+ramp-0 =  ramp-1 =  ramp-2 =  ramp-foreground = ${colors.foreground-alt}
+
+[module/time] type = custom/script exec = date interval = 1 format-underline = ${colors.primary} format-prefix = " " format-prefix-foreground = ${colors.foreground-alt}
+
+[module/volume] type = internal/volume format-volume = <label-volume> label-volume = VOL  label-volume-foreground = ${colors.foreground} format-muted-prefix = " " format-muted-foreground = ${colors.foreground-alt} label-muted = MUTED 
+
+[module/kernel-version] type = custom/script exec = uname -r interval = 1024 format-underline = ${colors.primary} format-prefix = " " format-prefix-foreground = ${colors.foreground-alt}
+
+[settings] screenchange-reload = true
+
+[global/wm] margin-top = 5 margin-bottom = 5
+
