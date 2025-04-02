@@ -19,8 +19,8 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show drun -theme /home/max/.config/rofi/theme/onedark.rasi
 
-
-
+bindsym $mod+shift+t move scratchpad
+bindsym $mod+t scratchpad show
 
 bindsym $mod+j focus left
 bindsym $mod+k focus down
