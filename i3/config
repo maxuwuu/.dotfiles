@@ -111,5 +111,5 @@ bindsym $mod+r mode "resize"
 
 exec --no-startup-id picom
 exec --no-startup-id feh --bg-scale
-exec --no-startup-id polybar max
+exec --no-startup-id polybar main
 exec_always --no-startup-id xrandr --output Virtual1 --mode 1920x1080
