@@ -2,7 +2,7 @@
 a I3WM repository. it has my config files
 # screenshots
 ![image](https://github.com/maxuwuu/.dotfiles/blob/main/Screenshots/4.png)
-![image](https://github.com/maxuwuu/.dotfiles/blob/main/Screenshots/5.png)
+![image](https://github.com/maxuwuu/.dotfiles/blob/main/Screenshots/8.png)
 ![image](https://github.com/maxuwuu/.dotfiles/blob/main/Screenshots/0.png)
 
 # dependencies
