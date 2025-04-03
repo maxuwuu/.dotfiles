@@ -1,40 +1,76 @@
 #!/bin/bash
 
-REPO_URL="https://github.com/maxuwuu/.dotfiles.git" DOTFILES_DIR="$HOME/.dotfiles" CONFIG_DIR="$HOME/.config" LINUX_DIR="$DOTFILES_DIR/linux"
+REPO_URL="https://github.com/maxuwuu/.dotfiles.git"
 
-HOME_FILES=(".nanorc" ".gitconfig" ".bashrc") CONFIG_FILES=("i3" "rofi" "polybar" "neofetch" "nitrogen" "dunst") PACKAGES_COMMON=("alacritty" "picom" "rofi" "polybar" "firefox" "gnome-software" "flatpak" "snapd" "dunst") PACKAGES_ARCH=("${PACKAGES_COMMON[@]}") PACKAGES_UBUNTU=("${PACKAGES_COMMON[@]}") PACKAGES_FEDORA=("${PACKAGES_COMMON[@]}")
+echo "Starting installation..."
 
-read -p "Do you want to install PipeWire instead of PulseAudio? (y/n): " pipewire_choice if [[ "$pipewire_choice" =~ ^[Yy]$ ]]; then PACKAGES_COMMON+=("pipewire" "pipewire-pulse" "wireplumber") else PACKAGES_COMMON+=("pulseaudio" "pulseaudio-utils" "pavucontrol") fi
-
-install_packages() { if command -v pacman &>/dev/null; then sudo pacman -Syu --noconfirm "${PACKAGES_ARCH[@]}" elif command -v apt &>/dev/null; then sudo apt update && sudo apt install -y "${PACKAGES_UBUNTU[@]}" elif command -v dnf &>/dev/null; then sudo dnf install -y "${PACKAGES_FEDORA[@]}" else exit 1 fi }
-
-backup_and_symlink() { local file_or_dir="$1" local target="$2" if [ -e "$target" ] || [ -L "$target" ]; then mv "$target" "${target}.bak" fi ln -s "$file_or_dir" "$target" }
-
-read -p "Do you want to install dotfiles and required packages? (y/n): " answer
-
-if [[ "$answer" =~ ^[Yy]$ ]]; then install_packages
-
-if [ -d "$DOTFILES_DIR" ]; then
-    mv "$DOTFILES_DIR" "${DOTFILES_DIR}.bak"
+read -p "Do you want to install all software and configuration files? (Y/N): " install_all
+if [[ "$install_all" != "Y" && "$install_all" != "y" ]]; then
+    echo "Installation canceled. No software will be installed."
+    exit 0
 fi
 
-git clone "$REPO_URL" "$DOTFILES_DIR"
+if [ -f /etc/debian_version ]; then
+    DISTRO="debian"
+    sudo apt update
+    sudo apt install -y \
+        i3 nitrogen feh polybar gnome-software alacritty rofi neofetch dunst nemo \
+        snapd flatpak gnome-software-plugin-snap
+    sudo apt install -y gnome-software-plugin-snap
+    sudo systemctl enable --now snapd
+    sudo systemctl enable --now flatpak
 
-mkdir -p "$CONFIG_DIR"
+elif [ -f /etc/arch-release ]; then
+    DISTRO="arch"
+    sudo pacman -Syu --noconfirm
+    sudo pacman -S --noconfirm \
+        i3 nitrogen feh polybar gnome-software alacritty rofi neofetch dunst nemo \
+        snapd flatpak gnome-software-plugin-snap
+    sudo systemctl enable --now snapd
+    sudo systemctl enable --now flatpak
 
-for file in "${HOME_FILES[@]}"; do
-    backup_and_symlink "$DOTFILES_DIR/$file" "$HOME/$file"
-done
+elif [ -f /etc/gentoo-release ]; then
+    DISTRO="gentoo"
+    sudo emerge --sync
+    sudo emerge -av \
+        i3 nitrogen feh polybar gnome-software alacritty rofi neofetch dunst nemo \
+        snapd flatpak
 
-if [ -f "$LINUX_DIR/.bashrc" ]; then
-    backup_and_symlink "$LINUX_DIR/.bashrc" "$HOME/.bashrc"
+elif [ -f /etc/kali-release ]; then
+    DISTRO="kali"
+    sudo apt update
+    sudo apt install -y \
+        i3 nitrogen feh polybar gnome-software alacritty rofi neofetch dunst nemo \
+        snapd flatpak gnome-software-plugin-snap
+    sudo systemctl enable --now snapd
+    sudo systemctl enable --now flatpak
+
+elif [ -f /etc/os-release ] && grep -q "NixOS" /etc/os-release; then
+    DISTRO="nixos"
+    nix-env -iA nixpkgs.i3 \
+        nixpkgs.nitrogen nixpkgs.fehr nixpkgs.polybar \
+        nixpkgs.gnome-software nixpkgs.alacritty \
+        nixpkgs.rofi nixpkgs.neofetch nixpkgs.dunst
+
+else
+    echo "Unsupported system detected. Please install the required software manually."
+    exit 1
 fi
 
-for dir in "${CONFIG_FILES[@]}"; do
-    backup_and_symlink "$DOTFILES_DIR/$dir" "$CONFIG_DIR/$dir"
-done
+git clone $REPO_URL ~/.dotfiles
+
+ln -sf ~/.dotfiles/linux/bashrc ~/.bashrc
+ln -sf ~/.dotfiles/i3/config ~/.config/i3/config
+ln -sf ~/.dotfiles/neofetch/config.conf ~/.config/neofetch/config.conf
+ln -sf ~/.dotfiles/dunst/dunstrc ~/.config/dunst/dunstrc
+ln -sf ~/.dotfiles/Alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
+ln -sf ~/.dotfiles/rofi/config.rasi ~/.config/rofi/config.rasi
+
+echo "Installing snap applications..."
+sudo snap install vlc
+
+echo "Installing flatpak applications..."
+sudo flatpak install flathub org.videolan.VLC
 
 echo "Installation complete!"
-
-else install_packages echo "Packages installed, dotfiles were not installed." fi
-
+exit 0
