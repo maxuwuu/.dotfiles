@@ -25,11 +25,10 @@ a I3WM repository. it has my config files
 
 GNOME
 
-sudo apt purge --auto-remove gnome gnome-core gnome-shell
+```sudo apt purge --auto-remove gnome gnome-core gnome-shell
 
-KDE Plasma
-
-sudo apt purge --auto-remove kde-plasma-desktop plasma-desktop kde-standard
+KDE Plasma     
+```sudo apt purge --auto-remove kde-plasma-desktop plasma-desktop kde-standard
 
 Xfce
 
