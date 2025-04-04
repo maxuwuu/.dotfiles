@@ -9,7 +9,7 @@ a I3WM repository. it has my config files
 - i3
 - nitrogen/feh
 - polybar
-- gnome-software 
+- i3lock 
 - alacritty
 - rofi
 - neofetch
