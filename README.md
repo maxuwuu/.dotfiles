@@ -16,4 +16,11 @@ a I3WM repository. it has my config files
 - dunst
 
   # installition
-- Just copy the config files in ur ~/.config for healthy installition :)
+
+
+- First, remove all services and applications that come with the desktop environment 
+
+Debian/Gnome : 
+
+```
+sudo apt purge --auto-remove gnome gnome-core gnome-shell 
