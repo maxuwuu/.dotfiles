@@ -22,6 +22,8 @@ bindsym $mod+d exec rofi -show drun
 bindsym $mod+shift+t move scratchpad
 bindsym $mod+t scratchpad show
 
+bindsym $mod+shift+x exec ~/.config/i3lock-color/lock.sh
+
 bindsym $mod+j focus left
 bindsym $mod+k focus down
 bindsym $mod+l focus up
